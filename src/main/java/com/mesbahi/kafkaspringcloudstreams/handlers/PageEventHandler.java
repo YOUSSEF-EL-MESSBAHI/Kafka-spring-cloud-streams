@@ -40,6 +40,7 @@ public class PageEventHandler {
         };
     }
 
+    // KStream
     @Bean
     public Function<KStream<String, PageEvent>, KStream<String, Long>> kStream(){
         return (stream)->
