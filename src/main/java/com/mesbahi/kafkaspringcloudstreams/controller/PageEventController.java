@@ -37,6 +37,8 @@ public class PageEventController {
         return event;
     }
 
+
+    // ANALYTICS KAFKA
     @GetMapping(path = "/analytics",produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Map<String, Long>> analytics(){
         return Flux.interval(Duration.ofSeconds(1))
